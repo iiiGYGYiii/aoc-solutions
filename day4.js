@@ -1,14 +1,6 @@
 // -------------- Day 4: Giant Squid ---------------
 
-const { performance } = require("perf_hooks");
-
-function checkPerformance(wrappedFunction) {
-  const start = performance.now();
-  const ret = wrappedFunction();
-  const end = performance.now();
-  console.log(`Function executed within ${end - start}ms.`);
-  return ret;
-}
+const { checkPerformance } = require("./utils");
 
 const testInput = {
   input: `7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1
