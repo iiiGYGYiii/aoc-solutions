@@ -8,6 +8,15 @@ function checkPerformance(wrappedFunction) {
   return ret;
 }
 
+function testAnswer(input, answerFunction, expectedValue) {
+  const answer = answerFunction(input);
+  console.assert(
+    answer === expectedValue,
+    `Expected ${expectedValue}, got ${answer} instead.`
+  );
+}
+
 module.exports = {
   checkPerformance,
+  testAnswer,
 };
